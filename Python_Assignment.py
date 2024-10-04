@@ -42,7 +42,6 @@ def fit_spectrum(wavelengths, fluxes):
 
 def plot_spectrum(wavelengths, fluxes, popt):
     plt.figure(figsize=(12, 8))
-
     # plot all the data
     plt.subplot(3, 1, 1)
     plt.plot(wavelengths, fluxes, label='spectrum')
@@ -76,14 +75,8 @@ def plot_spectrum(wavelengths, fluxes, popt):
     plt.show()
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: python my_pipeline.py filename")
-        sys.exit(1)
-
-    filename = sys.argv[1]
-
     # read spectrum data
-    wavelengths, fluxes = read_data('spectrum.txt')
+    wavelengths, fluxes = read_data('C://My Files//Space Science//Space Detector Laboratory//Assignments//Assignment-1//spectrum.txt')
 
     # fit spectrum
     popt, _ = fit_spectrum(wavelengths, fluxes)
