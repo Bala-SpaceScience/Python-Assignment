@@ -1,4 +1,3 @@
-import sys
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
@@ -42,6 +41,7 @@ def fit_spectrum(wavelengths, fluxes):
 
 def plot_spectrum(wavelengths, fluxes, popt):
     plt.figure(figsize=(12, 8))
+
     # plot all the data
     plt.subplot(3, 1, 1)
     plt.plot(wavelengths, fluxes, label='spectrum')
